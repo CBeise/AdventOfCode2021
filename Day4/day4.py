@@ -103,7 +103,7 @@ for i in range(len(box_rows)):
         new_board = Board()
     new_board.add_row(box_rows[i])
 
-# Because the first time the above loop runs, and empty board is added to the bag
+# Because the first time the above loop runs, an empty board is added to the bag
 del board_bag[0]
 
 # Start calling numbers, it's time to play!
