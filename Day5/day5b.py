@@ -49,6 +49,25 @@ while counter < len(x_coord):
             x1, x2 = x2, x1
         for i in range(x1, x2 + 1):
             grid[i][y1] += 1
+    # Diagonal
+    elif x1 > x2:
+        if y1 < y2:
+            for i in range(x1, x2 - 1, -1):
+                grid[i][y1] += 1
+                y1 += 1
+        else:
+            for i in range(x1, x2 - 1, -1):
+                grid[i][y1] += 1
+                y1 -= 1
+    elif y1 < y2:
+        for i in range(x1, x2 + 1):
+            grid[i][y1] += 1
+            y1 += 1
+    else:
+        for i in range(x1, x2 + 1):
+            grid[i][y1] += 1
+            y1 -= 1
+
 
 overlap = 0
 
